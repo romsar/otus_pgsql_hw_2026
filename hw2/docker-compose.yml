@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: postgres:18
+    container_name: postgres
+
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - ~/hw2_postgres_new_disk:/mnt/data
+
+    command: ["postgres", "-c", "data_directory=/mnt/data/18/docker"]
