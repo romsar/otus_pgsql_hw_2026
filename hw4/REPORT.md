@@ -14,7 +14,7 @@ select count(*) from pgbench_accounts;
 (1 строка)
 ```
 
-3. Выполняю первоначальный прогон pgbench. Конфигурация: 60 секунд, 10 клиентов, 4 потока.
+3. Выполняю первоначальный прогон pgbench. Конфигурация: 60 секунд, 20 клиентов, 4 потока.
 ```
 docker exec -it postgres pgbench -c 20 -j 4 -T 60 -U postgres postgres
 
